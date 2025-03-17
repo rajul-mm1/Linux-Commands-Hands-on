@@ -1,0 +1,29 @@
+List all files and directories in the current location.
+-->  ls 
+Displays detailed information (permissions, owner, group, size, and modification date).
+--> ls -l
+Shows all files, including hidden ones.
+--> ls -a
+Combines -l and -a to show detailed info of all files, including hidden ones.
+--> ls -la
+Lists files sorted by modification time (newest first).
+--> ls -lt
+Lists files sorted by size (largest first). This command will only show the size without any format such as KB, MB OR GB.
+--> ls -lS
+Displays the list in reverse order.
+--> ls -lr
+Shows file sizes in human-readable format (e.g., KB, MB, GB).
+--> ls -lh
+Lists only directories in the current location.
+--> ls -d */
+--> ls -p | grep /   
+[NOTE - in this command -p will place / at the ending of the directories showing us a distinction between files and directories. grep command will match all the names ending with / and therefore gives us all the directory names as output]
+
+Excludes directories from the list and displays only files.
+--> ls -p | grep -v /    
+[NOTE - here -p will put / at the end of directories. -v will remove all the directories with grep matching the sequence "/". When we use only ls command, it simply lists all the file and directory names without showing a clear distinction between files and directories. For a beginner, it could be difficult to identify the color difference and distinguish, so using -p is a great way for a clear and easy distinction]
+
+Combining Multiple Options
+--> ls -lhtr 
+[NOTE - Lists files in human-readable format, sorted by modification time, and in reverse order.]
+

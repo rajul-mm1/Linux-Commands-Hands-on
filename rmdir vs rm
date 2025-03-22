@@ -1,0 +1,24 @@
+rmdir (Remove Directory)
+ ** Used only for empty directories
+ ** If the directory is not empty, it will not be deleted.
+
+Example:
+--> rmdir mydir  # Deletes 'mydir' only if it's empty
+** If mydir contains files, you'll get an error: failed to remove 'mydir': Directory not empty
+
+rm (Remove)
+** Can delete files and directories (even non-empty ones).
+
+Example:
+--> rm file.txt  # deletes a single file
+--> rm -d mydir  # deletes the mentioned directory if empty if not empty you will get an error: cannot remove 'mydir': Directory not empty
+
+To Delete a Non-Empty Directory:
+** If mydir is not empty, use:
+--> rm -r mydir    # -r (recursive) → Deletes the directory and everything inside it.
+
+** If you want to force delete without confirmation, use:
+--> rm -rf mydir   # -f (force) → Ignores errors and deletes without asking.
+
+*** ⚠ BE CAREFUL WITH rm -rf, AS IT CANNOT BE UNDONE. *** 
+

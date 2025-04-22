@@ -1,0 +1,63 @@
+📁 Directory Navigation
+1. Print current working directory
+--> pwd
+
+2. Change directory
+--> cd dir_name
+
+3.Move up one directory [this commands works in a hierarchy]
+--> cd ..
+
+4.Go to home directory
+--> cd ~ or cd
+
+5.Go to previous directory [this command runs for switching between different directories. It remembers the previous directory path you were working in]
+--> cd -
+
+📂 Creating Directories
+1. Create a directory
+--> mkdir dir_name  [ex: mkdir cloud_computing]
+
+2. Create nested directories
+--> mkdir -p path/to/dir [ex: mkdir -p projects/devops/docker]
+NOTE: 
+1. Creates a nested directory structure in one command.
+2. If parent directories (like projects, devops, or docker) do not exist, it creates them automatically.
+3. The -p flag means "make parent directories as needed" and prevents errors if they already exist. Without -p, this would fail if any parent directory doesn't exist.
+
+🗑️ Deleting Directories
+1. Removes an empty directory only
+--> rmdir dir_name [ex: rmdir cloud_computing]
+
+2. Remove a directory and its contents recursively. It asks for confirmation before deleting the folder. "Recursively" means performing an action not just on a folder, but on everything inside it, including subfolders, and their subfolders, and so on — like a chain reaction.
+--> rm -r dirname [ex: rm -r cloud_computing] 
+
+3. Force delete directory without confirmation
+--> rm -rf dirname [ex: rm -rf cloud_computing]
+
+🔁 Copying Directories
+1. Recursively copy a directory
+--> cp -r sourcedir destdir [ex: cp -r cloud_computing projects/devops/docker]
+
+🔀 Moving/Renaming Directories
+1. Rename directory
+--> mv oldname newname [ex: mv cloud_computing cloud] 
+
+2. Move directory to another path
+--> mv dirname /new/location/ [ex: mv cloud /devops/aws/]
+
+🔎 Finding Directories
+1. Find directories by name
+--> find /path -type d -name "dirname"   [ex: find /home/rajul -type d -name "scripts"]
+NOTE:
+** /path - it tells where to start searching
+** -type d - it tells to only search the directories
+** -name - it tells the name of the directory to be searched
+** Case-insensitive search - find /home/rajul -type d -iname "scripts"
+
+2. Find Directories Older Than 7 Days
+find /home/rajul/projects -type d -mtime +7
+
+3. Show directory structure in the form of a tree in hierarchical order
+--> install tree if not installed - sudo apt update && sudo apt install tree
+--> tree /home/rajul/projects
